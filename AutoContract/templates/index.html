@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoContract</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .form{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <center><h1>AutoContract</h1></center>
+<form class="form">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Место составления</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Дата составления</label>
+    <input type="date" class="form-control" id="exampleInputPassword1">
+  </div>
+    <b>Текущий владелец транспортного средства</b><br><br>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Ф. И. О.</label>
+    <input type="text" class="form-control" id="exampleInputPassword1">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Дата рождения</label>
+    <input type="date" class="form-control" id="exampleInputPassword1">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Место рождения</label>
+    <input type="text" class="form-control" id="exampleInputPassword1">
+  </div>
+    <p>Паспорт</p>
+    <div class="row">
+        <div class="col-md-4">
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label"></label>
+    <input type="date" class="form-control" id="exampleInputPassword1">
+  </div>
+        </div>
+        <div class="col-md-4">
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label"></label>
+    <input type="text" class="form-control" placeholder="Номер" id="exampleInputPassword1">
+  </div>
+        </div>
+        <div class="col-md-4">
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label"></label>
+    <input type="text" class="form-control" placeholder="Серия" id="exampleInputPassword1">
+  </div>
+        </div>
+    </div>
+
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label"></label>
+    <textarea class="form-control w-100" placeholder="Кем выдан"></textarea>
+  </div>
+  <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"></label>
+      <textarea class="form-control w-100" placeholder="Адрес регистрации"></textarea>
+    </div>
+        <b>Покупатель транспортного средства</b><br><br>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Ф. И. О.</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Телефон</label>
+          <input type="tel" class="form-control w-100" placeholder="+79035995555">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Дата рождения</label>
+        <input type="date" class="form-control" id="exampleInputPassword1">
+      </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Место рождения</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+      </div>
+        <p>Паспорт</p>
+        <div class="row">
+            <div class="col-md-4">
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <input type="date" class="form-control" id="exampleInputPassword1">
+      </div>
+            </div>
+            <div class="col-md-4">
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <input type="text" class="form-control" placeholder="Номер" id="exampleInputPassword1">
+      </div>
+            </div>
+            <div class="col-md-4">
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <input type="text" class="form-control" placeholder="Серия" id="exampleInputPassword1">
+      </div>
+            </div>
+        </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <textarea class="form-control w-100" placeholder="Кем выдан"></textarea>
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"></label>
+          <textarea class="form-control w-100" placeholder="Адрес регистрации"></textarea>
+        </div>
+
+        <b>Транспортное средство</b><br><br>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Марка и модель</label>
+            <input type="text" class="form-control w-100" placeholder="Lada">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">VIN</label>
+              <input type="text" class="form-control w-100" placeholder="1234567890ABCDEFG">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Тип ТС</label>
+                <input type="text" class="form-control w-100" value="Легковой">
+              </div>
+              <p>Модель и номер двигателя</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                      <input type="text" class="form-control w-100" placeholder="Модель">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                      <input type="text" class="form-control w-100" placeholder="Номер">
+                    </div>
+                </div>
+              </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Номер шасси/рамы</label>
+          <input type="text" class="form-control w-100" placeholder="Oтсутствует">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Номер кузова</label>
+            <input type="text" class="form-control w-100">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Цвет</label>
+              <input type="text" class="form-control w-100">
+            </div>
+    <p>Мощность и объем двигателя</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+            <input type="text" class="form-control w-100" placeholder="Мощность">
+            <p>л.с.</p>
+          </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+            <input type="text" class="form-control w-100" placeholder="Объём">
+            <p>см3</p>
+          </div>
+      </div>
+    </div>
+    <p>Паспорт ТС (ПТС/ЭПТС)</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="mb-3">
+            <input type="date" class="form-control w-100">
+          </div>
+
+      </div>
+      <div class="col-md-4">
+        <div class="mb-3">
+            <input type="text" class="form-control w-100" placeholder="Серия">
+          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="mb-3">
+            <input type="text" class="form-control w-100" placeholder="Номер">
+          </div>
+      </div>
+    </div>
+    <textarea name="name" placeholder="Кем выдан" class="form-control mb-3"></textarea>
+    <p>Свидетельство о регистрации (СТС)</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="mb-3">
+            <input type="date" class="form-control w-100">
+          </div>
+
+      </div>
+      <div class="col-md-4">
+        <div class="mb-3">
+            <input type="text" class="form-control w-100" placeholder="Серия">
+          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="mb-3">
+            <input type="text" class="form-control w-100" placeholder="Номер">
+          </div>
+      </div>
+    </div>
+    <textarea name="name" placeholder="Кем выдан" class="form-control mb-3"></textarea>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Пробег</label>
+        <input type="text" class="form-control w-100">
+        <p>км</p>
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Госномер</label>
+          <input type="text" class="form-control w-100" placeholder="A000AA777">
+          <p>RUS</p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Стоимость ТС</label>
+            <input type="text" class="form-control w-100">
+            <p>рублей</p>
+          </div>
+
+  <button type="submit" class="btn btn-primary">Составить договор</button>
+</form>
+
+</body>
+</html>
