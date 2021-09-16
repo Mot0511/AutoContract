@@ -67,32 +67,30 @@ def contract():
         document.add_paragraph(place + '/' + date1_sost)
 
         document.add_heading('Договор о купли-продажи авто', 0)
-        p = document.add_paragraph(name_bayer + ', ' + date_birth_bayer + ', ' + place_birth_bayer + ', ' + adress_bayer + ', ' + seria_bayer + ', ' + number_pass_bayer + ', ' + vadan_bayer + ', ' + date_birth_bayer + ', ' + date_pass_bayer)
-
+        p3 = document.add_paragraph(name_saler + ', ' + date_birth_saler + ', ' + place_birth_saler + ', ' + adres_saler + ', ' + seria_saler + ', ' + number_pass_saler + ', ' + vadan_saler + ', ' + date_birth_saler)
+        p = document.add_paragraph('ФИО, дата и место рождения, адрес места жительства, паспортные данные: серия, номер, кем выдан и когда')
         p2 = document.add_paragraph('именуемый(ая) в дальнейшем «Покупатель» с одной стороны, и')
 
-
-
-        p3 = document.add_paragraph(name_saler + ', ' + date_birth_saler + ', ' + place_birth_saler + ', ' + adres_saler + ', ' + seria_saler + ', ' + number_pass_saler + ', ' + vadan_saler + ', ' + date_birth_saler)
-
+        p = document.add_paragraph(name_bayer + ', ' + date_birth_bayer + ', ' + place_birth_bayer + ', ' + adress_bayer + ', ' + seria_bayer + ', ' + number_pass_bayer + ', ' + vadan_bayer + ', ' + date_birth_bayer + ', ' + date_pass_bayer)
+        p = document.add_paragraph('ФИО, дата и место рождения, адрес места жительства, паспортные данные: серия, номер, кем выдан и когда')
         p4 = document.add_paragraph('именуемый(ая) в дальнейшем «Продавец», с другой стороны, именуемые далее при совместном упоминании «Стороны», а по отдельности «Сторона», заключили настоящий договор (далее – «Договор») о нижеследующем')
 
         document.add_heading('1. Предмет договора')
         p5 = document.add_paragraph('1.1 Продавец обязуется передать в собственность Покупателя, а Покупатель – принять и оплатить транспортное средство (далее – ТС).')
 
-        document.add_paragraph(mm_car)
-        document.add_paragraph(vin)
-        document.add_paragraph(type_tc)
-        document.add_paragraph(model_dvig + '/' + number_dvig)
-        document.add_paragraph(number_shassi)
-        document.add_paragraph(number_kusov)
-        document.add_paragraph(volume + '/' + power)
-        document.add_paragraph(color)
-        document.add_paragraph(probeg)
-        document.add_paragraph(seria_tc + '/' + number_tc)
-        document.add_paragraph(vadan_tc)
-        document.add_paragraph(date_tc)
-        document.add_paragraph(gosnumber)
+        document.add_paragraph('Марка и модель транспортного средства: ' + mm_car)
+        document.add_paragraph('Идентификационный номер (VIN): ' + vin)
+        document.add_paragraph('Тип (легковой, грузовой и т.д.): ' + type_tc)
+        document.add_paragraph('Модель двигателя / Номер двигателя: ' + model_dvig + ' / ' + number_dvig)
+        document.add_paragraph('Номер шасси, рамы: ' + number_shassi)
+        document.add_paragraph('Номер кузова: ' + number_kusov)
+        document.add_paragraph('Рабочий объем, куб. см. / Мощность двигателя, л. с: ' + volume + '/' + power)
+        document.add_paragraph('Цвет кузова: ' + color)
+        document.add_paragraph('Пробег, км.: ' + probeg)
+        document.add_paragraph('Паспорт ТС, серия / номер: ' + seria_tc + '/' + number_tc)
+        document.add_paragraph('Кем выдан: ' + vadan_tc)
+        document.add_paragraph('Дата выдачи: ' + date_tc)
+        document.add_paragraph('Гос. номер: ' + gosnumber)
 
         document.add_paragraph('1.2. Собственником ТС до его передачи Покупателю является Продавец (свидетельство о регистрации транспортного средства серия')
         document.add_paragraph(seria_ctc + '№' + number_ctc + 'выдано' + ' ' + vadan_ctc + ' ' + date_ctc)
