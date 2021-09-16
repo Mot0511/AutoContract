@@ -1,6 +1,7 @@
 from flask import *
 from docx import Document
 from docx.shared import Inches
+import random
 
 app = Flask(__name__, static_folder="static")
 # -*- coding: utf8 -*-
@@ -19,6 +20,8 @@ def index(name=None):
 @app.route('/contract', methods=['GET', 'POST'])
 def contract():
     if request.method == 'POST':
+        r = str(random.randint(0, 1000))
+
         place = request.form.get('place')
         date1_sost = request.form.get('date1_sost')
         name_saler = request.form.get('name_saler')
@@ -29,6 +32,8 @@ def contract():
         seria_saler = request.form.get('seria_saler')
         vadan_saler = request.form.get('vadan_saler')
         adres_saler = request.form.get('adres_saler')
+        year = request.form.get('year')
+
 
         name_bayer = request.form.get('name_bayer')
         tel_bayer = request.form.get('tel_bayer')
@@ -87,6 +92,7 @@ def contract():
         document.add_paragraph('Рабочий объем, куб. см. / Мощность двигателя, л. с: ' + volume + '/' + power)
         document.add_paragraph('Цвет кузова: ' + color)
         document.add_paragraph('Пробег, км.: ' + probeg)
+        document.add_paragraph('Год выпуска: ' + year)
         document.add_paragraph('Паспорт ТС, серия / номер: ' + seria_tc + '/' + number_tc)
         document.add_paragraph('Кем выдан: ' + vadan_tc)
         document.add_paragraph('Дата выдачи: ' + date_tc)
@@ -120,7 +126,7 @@ def contract():
         document.add_paragraph('__________/____________')
 
         document.add_page_break()
-        document.save('test.docx')
+        document.save(r + '.docx')
 
-    return render_template('ok.html')
+        return send_file(r + '.docx', as_attachment=True)
 app.run()
