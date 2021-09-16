@@ -2,6 +2,7 @@ from flask import *
 from docx import Document
 from docx.shared import Inches
 import random
+import os
 
 app = Flask(__name__, static_folder="static")
 # -*- coding: utf8 -*-
@@ -16,6 +17,7 @@ document = Document()
 @app.route('/')
 def index(name=None):
     return render_template('index.html')
+
 
 @app.route('/contract', methods=['GET', 'POST'])
 def contract():
@@ -126,7 +128,7 @@ def contract():
         document.add_paragraph('__________/____________')
 
         document.add_page_break()
-        document.save(r + '.docx')
+        document.save('docs/' + r + '.docx')
 
-        return send_file(r + '.docx', as_attachment=True)
+        return send_file('docs/' + r + '.docx', as_attachment=True)
 app.run()
