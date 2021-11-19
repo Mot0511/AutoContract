@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}{%%}</title>
+    <link rel="stylesheet" href="styles.css">
+    <style media="screen">
+    .logo{
+      margin-left: 100px;
+      width: 50px;
+      height: auto;
+    }
+    .header h2{
+      margin-left: 170px;
+      margin-top: -55px;
+    }
+    .menu{
+      float: right;
+      margin-top: -55px;
+      display: flex;
+    }
+    .menu div{
+      background-color: white;
+      border-radius: 10px;
+      padding: 10px;
+      margin-left: 10px;
+      transition: background-color 0.3s;
+    }
+    .menu div a{
+      text-decoration: none;
+      color: black;
+    }
+    .menu div:hover{
+      background-color: #007822;
+      padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+      <img src="../img/logo.png" class="logo" alt="">
+      <h2>МБОУ СОШ №25 г. Кирова</h2>
+      <div class="menu">
+        <div class="">
+          <a href="/schoolData">Сведения об образовательной организации</a>
+        </div>
+        <div class="">
+          <a href="/contacts">Контакты</a>
+        </div>
+        <div class="">
+          <a href="#service">Сервисы</a>
+        </div>
+        <div class="">
+          <a href="#payServices">Платные услуги</a>
+        </div>
+        <div class="">
+          <a href="/safeSchool">Безопасная школа</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
