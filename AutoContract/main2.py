@@ -1,44 +1,62 @@
+from flask import *
 from docx import Document
-from docx.shared import Inches
 
-document = Document()
+app = Flask(__name__)
+doc = Document()
 
-document.add_heading('Document Title', 0)
+@app.route('/')
+def index():
 
-p = document.add_paragraph('A plain paragraph having some ')
-p.add_run('bold').bold = True
-p.add_run(' and some ')
-p.add_run('italic.').italic = True
+    a1 = '1'
+    a2 = '2'
+    a3 = '3'
+    a4 = '4'
+    a5 = '5'
+    a6 = '6'
+    a7 = '7'
+    a8 = '8'
+    a9 = '9'
+    a10 = '10'
 
-document.add_heading('Heading, level 1', level=1)
-document.add_paragraph('Intense quote', style='Intense Quote')
+    a11 = '11'
+    a12 = '12'
+    a13 = '13'
+    a14 = '14'
+    a15 = '15'
+    a16 = '16'
+    a17 = '17'
+    a18 = '18'
+    a19 = '19'
+    a20 = '20'
 
-document.add_paragraph(
-    'first item in unordered list', style='List Bullet'
-)
-document.add_paragraph(
-    'first item in ordered list', style='List Number'
-)
+    a21 = '21'
+    a22 = '22'
+    a23 = '23'
+    a24 = '24'
+    a25 = '25'
+    a26 = '26'
+    a27 = '27'
+    a28 = '28'
+    a29 = '29'
+    a30 = '30'
 
-document.add_picture('image.png', width=Inches(1.25))
+    a31 = '31'
+    a32 = '22'
+    a33 = '33'
+    a34 = '34'
+    a35 = '35'
+    a36 = '36'
+    a37 = '37'
+    a38 = '38'
+    a39 = '39'
+    a40 = '40'
 
-records = (
-    (3, '101', 'Spam'),
-    (7, '422', 'Eggs'),
-    (4, '631', 'Spam, spam, eggs, and spam')
-)
+    doc.add_paragraph(a1 + ' ' + a2  + ' ' + a3  + ' ' + a4 + ' ' + a5 + ' ' + a6 + ' ' + a7 + ' ' + a8 + ' ' + a9 + ' ' + a10 + ' ' + a11 + ' ' + a12 + ' ' + a13 + ' ' + a14 + ' ' +
+                                                a15 + ' ' + a16 + ' ' + a17 + ' ' + a18 + ' ' + a19 + ' ' + a20 + ' ' + a21 + ' ' +
+                                                a22 + ' ' + a23 + ' ' + a24 + ' ' + a25 + ' ' + a26 + ' ' + a27 + ' ' + a28 + ' ' +
+                                                a29 + ' ' + a30 + ' ' + a31 + ' ' + a32 + ' ' + a33 + ' ' + a34 + ' ' + a35 + ' ' + a36 + ' ' + a37 + ' ' + a38 + ' ' +
+                                                a39 + ' ' + a40)
+    doc.save('test.docx')
 
-table = document.add_table(rows=1, cols=3)
-hdr_cells = table.rows[0].cells
-hdr_cells[0].text = 'Qty'
-hdr_cells[1].text = 'Id'
-hdr_cells[2].text = 'Desc'
-for qty, id, desc in records:
-    row_cells = table.add_row().cells
-    row_cells[0].text = str(qty)
-    row_cells[1].text = id
-    row_cells[2].text = desc
-
-document.add_page_break()
-
-document.save('demo.docx')
+    return ''
+app.run()
